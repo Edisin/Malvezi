@@ -313,19 +313,5 @@ public class BancoApp {
         }
 
     }
-     try (
-    private Object DatabaseConnection;
-    Connection conn = DatabaseConnection.conectar()) {
-        String query = "INSERT INTO endereco_cliente (numeroConta, nomeCliente, endereco, telefone) VALUES (?, ?, ?, ?)";
-        var stmt = conn.prepareStatement(query);
-        stmt.setString(1, numeroConta);
-        stmt.setString(2, nomeCliente);
-        stmt.setString(3, endereco);
-        stmt.setString(4, telefone);
-        stmt.executeUpdate();
-    } catch (
-    SQLException e) {
-        e.printStackTrace();
-    }
 
 }
